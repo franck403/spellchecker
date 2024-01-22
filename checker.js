@@ -52,12 +52,15 @@ function setup(text) {
 
 window.setup = setup
 // check a string
+var checking = []
 function checkText(text) {
     var textList = text.split(' ')
+    var checking = []
     textList.forEach(string => {
-        setup(string)        
+        var search = setup(string)        
+        checking.push(search)
     });
-    return text
+    return checking.join(' ')
 }
 
 window.checkText = checkText
