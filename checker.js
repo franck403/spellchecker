@@ -35,3 +35,5 @@ loadWorldsList(french)
 function check(word,possible) {
     wagnerFischer(word, possible)
 }
+
+window.check = check
