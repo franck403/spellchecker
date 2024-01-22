@@ -1,3 +1,6 @@
+// import module
+import wagnerFischer from 'https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/+esm'
+
 // load js file
 function loadJS(url) { 
     let scriptToAdd = document.createElement('script');     
@@ -23,10 +26,9 @@ var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
 var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
 
 // wagner fischer algorithm
-var wagnerURL = "https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/lib/wagner-fischer.min.js"
+var wagner = wagnerFischer
 
 // load js files and load dict
-loadJS(wagnerURL)
 loadWorldsList(french)
 
 // check function
