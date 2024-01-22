@@ -30,6 +30,6 @@ loadJS(wagnerURL)
 loadWorldsList(french)
 
 // check function
-function check(word) {
-    wagnerFischer('saturday', 'sunday')
+function check(word,possible) {
+    wagnerFischer(word, possible)
 }
