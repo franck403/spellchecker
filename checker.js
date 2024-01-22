@@ -19,11 +19,11 @@ function loadWorldsList(url) {
 }
 
 // cdn url to fetch to get the words
-english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
-french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
+var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
+var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
 
 // wagner fischer algorithm
-wagnerURl = "https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/lib/wagner-fischer.min.js"
+var wagnerURl = "https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/lib/wagner-fischer.min.js"
 
 // load js files and load dict
 loadJS(wagnerURL)
