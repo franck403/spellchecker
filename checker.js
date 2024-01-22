@@ -44,9 +44,11 @@ function setup(text) {
         if (check(text,word) > 0) {
             if (check(text,word) == 0) {
                 console.log('founeded word with no error : ' + text)                
+                window.findedWord = text
             }
         }
     });
+    return window.findedWord
 }
 
 window.setup = setup
