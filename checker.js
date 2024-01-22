@@ -54,7 +54,7 @@ window.setup = setup
 // check a string
 function checkText(text) {
     var textList = text.split(' ')
-    .forEach(string => {
+    textList.forEach(string => {
         setup(string)        
     });
     return text
