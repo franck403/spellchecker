@@ -39,7 +39,7 @@ function check(word, possible) {
 
 window.check = check
 function setup(text) {
-    var wordsListSplit = wordList.split('\n')
+    var wordsListSplit = wordList.split('\r')
     wordsListSplit.forEach(word => {
         if (check(text,word) > 0) {
             console.log('founeded word with no error : ' + text)                
