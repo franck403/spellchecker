@@ -46,14 +46,14 @@ function setup() {
         let count = wordList.get(word) || 0;
         wordList.set(word, count + 1);
     
-        var P = (word, N = Array.from(WORDS.values()).reduce((a, b) => a + b)) => WORDS.get(word) / N;
+        var P = (word, N = Array.from(wordList.values()).reduce((a, b) => a + b)) => wordList.get(word) / N;
     })
     var correction = word => {
         var candidates = known([word]) || known(edits1(word)) || known(edits2(word)) || [word];
         return candidates.reduce((a, b) => P(a) > P(b) ? a : b);
     };
     
-    var known = words => new Set(words.filter(word => WORDS.has(word)));
+    var known = words => new Set(words.filter(word => wordList.has(word)));
     
     var edits1 = word => {
         var letters = 'abcdefghijklmnopqrstuvwxyz';
