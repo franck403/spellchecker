@@ -38,6 +38,7 @@ function check(word, possible) {
 }
 
 window.check = check
+// search diction for sugestion
 function setup(text) {
     var wordsListSplit = wordList.split('\r')
     wordsListSplit.forEach(word => {
@@ -50,3 +51,13 @@ function setup(text) {
 }
 
 window.setup = setup
+// check a string
+function checkText(text) {
+    var textList = text.split(' ')
+    .forEach(string => {
+        setup(string)        
+    });
+    return text
+}
+
+window.checkText = checkText
