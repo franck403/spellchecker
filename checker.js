@@ -33,7 +33,7 @@ loadWorldsList(french)
 
 // check function
 function check(word,possible) {
-    wagnerFischer(word, possible)
+    return wagnerFischer(word, possible)
 }
 
 window.check = check
