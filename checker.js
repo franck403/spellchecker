@@ -23,7 +23,7 @@ var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
 var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
 
 // wagner fischer algorithm
-var wagnerURl = "https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/lib/wagner-fischer.min.js"
+var wagnerURL = "https://cdn.jsdelivr.net/npm/wagner-fischer@1.0.0/lib/wagner-fischer.min.js"
 
 // load js files and load dict
 loadJS(wagnerURL)
