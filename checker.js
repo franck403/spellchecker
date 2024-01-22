@@ -42,7 +42,7 @@ window.check = check
 function setup(text) {
     var wordsListSplit = wordList.split('\r')
     wordsListSplit.forEach(word => {
-        if (word.startsWith(word.charAt(1)) == text.charAt(1) && check(text,word) > 0 && check(text,word) < 3) {
+        if (word.startsWith(word.charAt()) == text.charAt() && check(text,word) > 0 && check(text,word) < 3) {
             console.log('founeded word with no error : ' + word)                
             window.findedWord = text
         }
