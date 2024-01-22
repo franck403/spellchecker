@@ -42,10 +42,8 @@ function setup(text) {
     var wordsListSplit = wordList.split('\n')
     wordsListSplit.forEach(word => {
         if (check(text,word) > 0) {
-            if (check(text,word) == 0) {
-                console.log('founeded word with no error : ' + text)                
-                window.findedWord = text
-            }
+            console.log('founeded word with no error : ' + text)                
+            window.findedWord = text
         }
     });
     return window.findedWord
