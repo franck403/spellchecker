@@ -29,7 +29,7 @@ var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais
 var wagner = wagnerFischer
 
 // load js files and load dict
-var wordList = loadWorldsList(french) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n|' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@'
+var wordList = loadWorldsList(french) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@'
 window.wordList = wordList
 
 // check function
@@ -49,9 +49,17 @@ function setup(text) {
             possibleWords.push(word)
         }
     });
-    if (window.findedWord == '') {
+    if (possibleWords.length == 0) {
         wordsListSplit.forEach(word => {
-            if (check(text,word) < 2) {
+            if (check(text,word) < 2 && word.startsWith(text.charAt())) {
+                console.log('founeded word with no error : ' + word)                
+                possibleWords.push(word)
+            }
+        });
+    }
+    if (possibleWords.length == 0) {
+        wordsListSplit.forEach(word => {
+            if (check(text,word) < 3) {
                 console.log('founeded word with no error : ' + word)                
                 possibleWords.push(word)
             }
@@ -68,7 +76,7 @@ function checkText(text) {
     var checking = []
     textList.forEach(string => {
         var search = setup(string)        
-        checking.push(search)
+        checking.push(search.join('|'))
     });
     return checking.join(' ')
 }
