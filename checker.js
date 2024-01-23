@@ -40,11 +40,13 @@ function check(word, possible) {
 window.check = check
 // search diction for sugestion
 function setup(text) {
-    var wordsListSplit = wordList.split('\r')
+    var wordsListSplit = window.wordList.replaceAll('\n','').split('\r')
+    window.findedWord = ''
+    var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
-        if (word.startsWith(word.charAt()) == text.charAt() && check(text,word) > 0 && check(text,word) < 3) {
+        if (check(text,word) == 0  && check(text,word) < 3) {
             console.log('founeded word with no error : ' + word)                
-            window.findedWord = text
+            window.findedWord = word
         }
     });
     return window.findedWord
