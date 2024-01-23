@@ -21,10 +21,11 @@ function loadWorldsList(url) {
     return null;
 }
 function removeDuplicates(arr) {
-    return arr.filter((item,
-        index) => arr.indexOf(item) === index);
+    return [...new Set(arr)];
 }
-
+function filterStringsByPrefix(arr, prefix) {
+    return arr.filter(str => str.startsWith(prefix));
+}
 // cdn url to fetch to get the words
 var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
 var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
@@ -47,6 +48,7 @@ window.check = check
 // search diction for sugestion
 function setup(text) {
     var wordsListSplit = window.wordList.replaceAll('\n','').split('\r')
+    var wordsListSplit = filterStringsByPrefix(wordsListSplit,text.charAt())
     var possibleWords = []
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
