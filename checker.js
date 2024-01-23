@@ -81,6 +81,9 @@ function setup(text) {
             }
         });
     }
+    if (possibleWords.length == 0) {
+        var possibleWords = [text]
+    }
     return possibleWords
 }
 
