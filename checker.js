@@ -28,7 +28,7 @@ function filterStringsByPrefix(arr, prefix) {
 }
 // cdn url to fetch to get the words
 var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
-var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
+var french = 'https://cdn.jsdelivr.net/gh/franck403/spellchecker@master/liste_francais.txt'
 var contries = 'https://cdn.statically.io/gist/dariusz-wozniak/656f2f9070b4205c5009716f05c94067/raw/b291d58154c85dad840859fef4e63efb163005b0/list-of-countries.txt'
 
 // wagner fischer algorithm
