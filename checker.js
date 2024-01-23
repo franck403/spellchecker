@@ -33,7 +33,7 @@ var wagner = wagnerFischer
 var wordList = loadWorldsList(french) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@' + '\r\nse' + '\r\na'
 var contriesList = loadWorldsList(contries)
 window.wordList = wordList
-
+window.contriesList = contriesList
 // check function
 function check(word, possible) {
     return wagnerFischer(word, possible)
@@ -68,7 +68,7 @@ function setup(text) {
         });
     }
     if (possibleWords.length == 0) {
-        contriesList.split('\r').forEach(word => {
+        window.contriesList.split('\r').forEach(word => {
             if (check(text,word) < 1) {
                 console.log('founded contrie with no error : ' + word)                
                 possibleWords.push(word)
