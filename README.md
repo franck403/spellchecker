@@ -18,5 +18,5 @@ Please note That the project is not optimazied for production.
 ###### var checker = new worker('https://spellcheckgeoloup.netlify.app/checker.worker.js')
 
 ## api
-window.setup('word') (get list for a word)
-window.checkText('text here spaced with space') (use a string with space to correct back)
+- window.setup('word') (get list for a word)
+- window.checkText('text here spaced with space') (use a string with space to correct back)
