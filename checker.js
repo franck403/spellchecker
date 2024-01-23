@@ -44,7 +44,7 @@ function setup(text) {
     window.findedWord = ''
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
-        if (check(text,word) == 0  && check(text,word) < 3) {
+        if (check(text,word) < 3) {
             console.log('founeded word with no error : ' + word)                
             window.findedWord = word
         }
