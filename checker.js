@@ -44,11 +44,19 @@ function setup(text) {
     window.findedWord = ''
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
-        if (check(text,word) < 3) {
+        if (check(text,word) < 1) {
             console.log('founeded word with no error : ' + word)                
             window.findedWord = word
         }
     });
+    if (window.findedWord == '') {
+        wordsListSplit.forEach(word => {
+            if (check(text,word) < 2) {
+                console.log('founeded word with no error : ' + word)                
+                window.findedWord = word
+            }
+        });
+    }
     return window.findedWord
 }
 
