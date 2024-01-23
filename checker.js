@@ -41,23 +41,23 @@ window.check = check
 // search diction for sugestion
 function setup(text) {
     var wordsListSplit = window.wordList.replaceAll('\n','').split('\r')
-    window.findedWord = ''
+    var possibleWords = []
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
         if (check(text,word) < 1) {
             console.log('founeded word with no error : ' + word)                
-            window.findedWord = word
+            possibleWords.push(word)
         }
     });
     if (window.findedWord == '') {
         wordsListSplit.forEach(word => {
             if (check(text,word) < 2) {
                 console.log('founeded word with no error : ' + word)                
-                window.findedWord = word
+                possibleWords.push(word)
             }
         });
     }
-    return window.findedWord
+    return possibleWords
 }
 
 window.setup = setup
