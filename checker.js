@@ -88,6 +88,7 @@ window.setup = setup
 // check a string
 var checking = []
 function checkText(text) {
+    var text = text.toLowerCase()
     var textList = text.split(' ')
     var checking = []
     textList.forEach(string => {
