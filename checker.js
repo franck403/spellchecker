@@ -24,12 +24,14 @@ function loadWorldsList(url) {
 // cdn url to fetch to get the words
 var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
 var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais.txt'
+var contries = 'https://cdn.statically.io/gist/dariusz-wozniak/656f2f9070b4205c5009716f05c94067/raw/b291d58154c85dad840859fef4e63efb163005b0/list-of-countries.txt'
 
 // wagner fischer algorithm
 var wagner = wagnerFischer
 
 // load js files and load dict
 var wordList = loadWorldsList(french) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@' + '\r\nse' + '\r\na'
+var contriesList = loadWorldsList(contries)
 window.wordList = wordList
 
 // check function
@@ -45,14 +47,14 @@ function setup(text) {
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
         if (check(text,word) < 1) {
-            console.log('founeded word with no error : ' + word)                
+            console.log('founded word with no error : ' + word)                
             possibleWords.push(word)
         }
     });
     if (possibleWords.length == 0) {
         wordsListSplit.forEach(word => {
             if (check(text,word) < 2 && word.startsWith(text.charAt())) {
-                console.log('founeded word with no error : ' + word)                
+                console.log('founded word with no error : ' + word)                
                 possibleWords.push(word)
             }
         });
@@ -60,7 +62,15 @@ function setup(text) {
     if (possibleWords.length == 0) {
         wordsListSplit.forEach(word => {
             if (check(text,word) < 3) {
-                console.log('founeded word with no error : ' + word)                
+                console.log('founded word with no error : ' + word)                
+                possibleWords.push(word)
+            }
+        });
+    }
+    if (possibleWords.length == 0) {
+        contriesList.split('\r').forEach(word => {
+            if (check(text,word) < 1) {
+                console.log('founded contrie with no error : ' + word)                
                 possibleWords.push(word)
             }
         });
