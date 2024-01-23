@@ -29,7 +29,7 @@ var french = 'https://cdn.jsdelivr.net/gh/Taknok/French-Wordlist@master/francais
 var wagner = wagnerFischer
 
 // load js files and load dict
-var wordList = loadWorldsList(english) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n|' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@'
+var wordList = loadWorldsList(french) + '\r\n.' + '\r\n,' + '\r\n/' + '\r\n|' + '\r\n:' + '\r\n(' + '\r\n)' + '\r\n*' + '\r\n?'  + '\r\n!' + '\r\n&' + '\r\n%' + '\r\n$' + '\r\n#' + '\r\n@'
 window.wordList = wordList
 
 // check function
