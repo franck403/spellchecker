@@ -20,6 +20,10 @@ function loadWorldsList(url) {
     }
     return null;
 }
+function removeDuplicates(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+}
 
 // cdn url to fetch to get the words
 var english = 'https://cdn.jsdelivr.net/gh/dwyl/english-words@master/words.txt'
@@ -86,7 +90,7 @@ function checkText(text) {
     var checking = []
     textList.forEach(string => {
         var search = setup(string)        
-        checking.push(search.join('|'))
+        checking.push(removeDuplicates(search).join('|'))
     });
     return checking.join(' ')
 }
