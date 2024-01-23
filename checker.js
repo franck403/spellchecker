@@ -41,7 +41,6 @@ window.check = check
 // search diction for sugestion
 function setup(text) {
     var wordsListSplit = window.wordList.replaceAll('\n','').split('\r')
-    console.log(wordsListSplit)
     var possibleWords = []
     var text = text.toLowerCase()
     wordsListSplit.forEach(word => {
