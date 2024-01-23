@@ -1,6 +1,6 @@
 # Spell Checker
 ## what is this ?
-### Spell Checker is a app you can use or add in you're project to correct user text.
+Spell Checker is a app you can use or add in you're project to correct user text.
 
 ## Suported feature
 - [x] english
@@ -9,4 +9,4 @@
 - [ ] capitalization
 - [ ] word chords
 ## Speed
-### Please note That the project is not optimazied for production.
+Please note That the project is not optimazied for production.
