@@ -1,0 +1,47 @@
+/* General page styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Style for corrected text */
+.correction {
+  position: relative;
+  display: inline-block;
+  color: #d6336c; /* red/pink tint for visibility */
+  background-color: #fff3f6;
+  border-bottom: 1px dashed #d6336c;
+  cursor: help;
+}
+
+/* Tooltip styles */
+.correction::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  white-space: pre-line;
+  width: max-content;
+  max-width: 300px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Tooltip arrow */
+.correction::before {
+  content: "";
+  position: absolute;
+  bottom: 110%;
+  left:
