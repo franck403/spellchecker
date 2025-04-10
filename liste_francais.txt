@@ -9207,6 +9207,7 @@ fardeau
 farder
 faribole
 farine
+faire
 farouche
 farouchement
 Farouk
@@ -22695,6 +22696,7 @@ yens
 yeux
 yiddish
 yoga
+y
 York
 Yorkshire
 yougoslave
