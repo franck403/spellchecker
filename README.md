@@ -10,8 +10,9 @@ Spell Checker is a app you can use or add in you're project to correct user text
 - [ ] word chords
 - [x] french accent ex : é,ç, etc
 - [x] New website UI
+
 ## Speed
-Please note That the project is not optimazied for production.
+Please note That the project was never tested for production.
 
 ## How to use
 ###### <script type='module' src="checker.js"></script>
