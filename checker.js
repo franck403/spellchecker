@@ -91,14 +91,36 @@ window.setup = setup
 // check a string
 var checking = []
 function checkText(text) {
-    var text = text.toLowerCase()
-    var textList = text.split(' ')
-    var checking = []
-    textList.forEach(string => {
-        var search = setup(string)        
-        checking.push(removeDuplicates(search).join('|'))
-    });
-    return checking.join(' ')
-}
+    const originalText = text;
+    const tokens = originalText.split(/(\b[\wÀ-ÿ'-]+\b)/g); // capture words with accents and hyphens
+    let result = '';
 
+    tokens.forEach(token => {
+        const word = token.trim();
+
+        // Skip non-word tokens (spaces, punctuation)
+        if (!/^[\wÀ-ÿ'-]+$/i.test(word)) {
+            result += token;
+            return;
+        }
+
+        const lowerWord = word.toLowerCase();
+        const suggestions = removeDuplicates(setup(lowerWord));
+
+        // If word is correct or only suggestion is itself
+        if (suggestions.length === 1 && suggestions[0] === lowerWord) {
+            result += token;
+        } else {
+            const filtered = suggestions.filter(w => w !== lowerWord);
+            if (filtered.length === 0) {
+                result += token;
+            } else {
+                const html = `<span class="correction" data-tip="Suggestions: ${filtered.join(', ')}">${token}</span>`;
+                result += html;
+            }
+        }
+    });
+
+    return result;
+}
 window.checkText = checkText
