@@ -9,6 +9,7 @@ Spell Checker is a app you can use or add in you're project to correct user text
 - [ ] capitalization
 - [ ] word chords
 - [x] french accent ex : é,ç, etc
+- [x] New website UI
 ## Speed
 Please note That the project is not optimazied for production.
 
