@@ -1,7 +1,32 @@
-<link rel="stylesheet" href="ui.css">
-<script type='module' src="checker.js"></script>
-<textarea id="value"></textarea>
-<button onclick="main()">Correct</button>
-<div id="result"></div>
-<script src="main.js"></script>
-<script src="https://devtool.geoloup.com/devtool.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Correction Page</title>
+
+  <!-- Devtool for debugging -->
+  <script src="https://devtool.geoloup.com/devtool.js"></script>
+
+  <!-- CSS UI Styling -->
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+
+  <!-- Text Input -->
+  <textarea id="value" placeholder="Enter text with possible errors..." rows="10" cols="80"></textarea>
+  
+  <!-- Button to trigger correction -->
+  <button onclick="main()">Correct</button>
+
+  <!-- Output container -->
+  <div id="result"></div>
+
+  <!-- Correction logic module -->
+  <script type="module" src="checker.js"></script>
+
+  <!-- Optional general script -->
+  <script src="main.js"></script>
+
+</body>
+</html>
