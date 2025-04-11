@@ -10,6 +10,7 @@ textarea {
   max-width: 700px;
   font-size: 1rem;
   padding: 0.75rem;
+  resize:none;
 }
 
 #result {
